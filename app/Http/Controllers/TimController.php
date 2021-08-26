@@ -40,20 +40,14 @@ class TimController extends Controller
     public function store(Request $request)
     {
         $model = new tim;
-
-        $bukti_bayar = $request->file('bukti_bayar')->getClientOriginalName();
-        $size = $request->file('bukti_bayar')->getSize();
-        $ext = $request->file('bukti_bayar')->getClientOriginalExtension();
-        $destination = base_path() . '/public/buktibayar';
-        $request->file('bukti_bayar')->move($destination, $bukti_bayar);
+       
         $model->nama_tim = $request->nama_tim;
         $model->asal_sekolah = $request->asal_sekolah;
-        $model->nama_bank = $request->nama_bank;
-        $model->pemilik_akun_bank = $request->pemilik_akun_bank;
-        $model->bukti_bayar = $bukti_bayar;
+        $model->asal_kota = $request->asal_kota;
+        $model->password = $request->password;
         $model->save();
 
-        return redirect('/');
+        return view('Front.daftarPeserta');
     }
 
     /**

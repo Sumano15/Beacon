@@ -14,13 +14,11 @@
         <br>
         asal sekolah: <input type="text" name="asal_sekolah">
         <br>
-        nama Bank: <input type="text" name="nama_bank">
+        Asal Kota: <input type="text" name="asal_kota">
         <br>
-        pemilik akun bank: <input type="text" name="pemilik_akun_bank" >
+        pasword: <input type="text" name="password">
         <br>
-        Bukti Bayar: <input type="file" name="bukti_bayar" id="">
-        <br>
-        <button type="submit">submit</button>
+        <button type="submit">next</button>
     </form>
 </body>
 </html>
