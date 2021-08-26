@@ -19,6 +19,7 @@ class CreateTimsTable extends Migration
             $table->string('asal_sekolah');
             $table->string('nama_bank');
             $table->string('pemilik_akun_bank');
+            $table->string('bukti_bayar');
             $table->timestamps();
         });
     }
