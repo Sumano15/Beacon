@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tim extends Model
+class peserta extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['nama_tim', 'asal_kota', 'asal_sekolah', 'password','bukti_transfer','nama_akun_bank','nama_bank','norek'];
+    protected $fillable = ['nama', 'no_tlep', 'id_line', 'instagram','email','foto','kartu_pelajar', 'tim_id'];
+
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\tim;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class TimController extends Controller
 {
@@ -26,7 +27,7 @@ class TimController extends Controller
     {
         $model = new tim;
 
-        return view('Front.daftar',compact(
+        return view('register.index',compact(
             'model'
         ));
     }
@@ -44,10 +45,10 @@ class TimController extends Controller
         $model->nama_tim = $request->nama_tim;
         $model->asal_sekolah = $request->asal_sekolah;
         $model->asal_kota = $request->asal_kota;
-        $model->password = $request->password;
-        $model->save();
+        $model->password = Hash::make($request->password);
+        // $model->save();
 
-        return view('Front.daftarPeserta');
+        return view('register-members.index',compact('model'));
     }
 
     /**

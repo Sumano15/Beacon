@@ -18,8 +18,13 @@ class CreateTimsTable extends Migration
             $table->string('nama_tim');
             $table->string('asal_sekolah');
             $table->string('asal_kota');
-            $table->string('password');
+            $table->text('password');
+            $table->string('bukti_transfer');
+            $table->string('norek');
+            $table->string('nama_bank');
+            $table->string('nama_akun_bank');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

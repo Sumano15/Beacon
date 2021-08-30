@@ -87,23 +87,24 @@
     <div class="container-fluid register-content pt-5 pb-5">
         <div class="row justify-content-center">
             <div class="col-5 register-form">
-                <form class="register-tim">
+                <form action="{{ route('tim.store') }}" method="POST"  enctype="multipart/form-data" class="register-tim">
+                    @csrf
                     <p class="register-text pt-4"> Registagion Page </p>
                     
-                    <div class="row pt-3">
+                    {{-- <div class="row pt-3">
                         <div class="col-1"></div>
                         <div class="col-10">
                             <label for="nama" class="form-label"> Email </label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                         </div>
                         <div class="col-1"> </div>
-                    </div>
+                    </div> --}}
 
                     <div class="row pt-3">
                         <div class="col-1"></div>
                         <div class="col-10">
-                            <label for="province" class="form-label"> Province </label>
-                            <input type="text" class="form-control" id="province" name="province" placeholder="Province">
+                            <label for="nama_tim" class="form-label"> Team's Name </label>
+                            <input type="text" class="form-control" id="nama_tim" name="nama_tim" placeholder="Team's Name">
                         </div>
                         <div class="col-1"> </div>
                     </div>
@@ -111,8 +112,8 @@
                     <div class="row pt-3">
                         <div class="col-1"></div>
                         <div class="col-10">
-                            <label for="city" class="form-label"> City </label>
-                            <input type="text" class="form-control" id="city" name="city" placeholder="City">
+                            <label for="asal_kota" class="form-label"> City </label>
+                            <input type="text" class="form-control" id="asal_kota" name="asal_kota" placeholder="City">
                         </div>
                         <div class="col-1"> </div>
                     </div>
@@ -120,8 +121,8 @@
                     <div class="row pt-3">
                         <div class="col-1"></div>
                         <div class="col-10">
-                            <label for="school" class="form-label"> School Origin </label>
-                            <input type="text" class="form-control" id="school" name="school" placeholder="School Origin">
+                            <label for="asal_sekolah" class="form-label"> School Origin </label>
+                            <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="School Origin">
                         </div>
                         <div class="col-1"> </div>
                     </div>
@@ -139,7 +140,7 @@
                         <div class="col-1"> </div>
                             <div class="col-10 login-here-text text-center">
                                 <p> Already have an account?</p>
-                                <a href="login"> Login here </a>
+                                <a href="{{ url('/login') }}"> Login here </a>
                             </div>
                         <div class="col-1"> </div>
                     </div>
