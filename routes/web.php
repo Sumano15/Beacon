@@ -23,3 +23,15 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('tim', TimController::class);
 
+Route::get('/register', function () {
+    return view('register.index');
+});
+
+Route::get('/register-members', function () {
+    return view('register-members.index');
+});
+
+Route::get('/login', function () {
+    return view('login.index');
+});
+
