@@ -32,7 +32,3 @@ Route::resource('peserta', PesertaController::class);
 // Route::get('/register-members', function () {
 //     return view('register-members.index');
 // });
-
-Route::get('/login', function () {
-    return view('login.index');
-});
