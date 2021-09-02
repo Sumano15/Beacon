@@ -140,7 +140,7 @@
                         <div class="col-1"> </div>
                             <div class="col-10 login-here-text text-center">
                                 <p> Already have an account?</p>
-                                <a href="{{ url('/login') }}"> Login here </a>
+                                <a href="{{ url('/login_tim') }}"> Login here </a>
                             </div>
                         <div class="col-1"> </div>
                     </div>
