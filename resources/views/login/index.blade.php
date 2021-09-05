@@ -97,8 +97,8 @@
         
                     <div class="row pt-3">
                         <div class="col-12">
-                            <label for="nama_tim" class="form-label"> Team's Name </label>
-                            <input type="text" class="form-control" id="nama_tim" name="nama_tim" placeholder="Team's Name">
+                            <label for="tn" class="form-label"> Team's Name </label>
+                            <input type="text" class="form-control" id="tn" name="tn" placeholder="Team's Name">
                         </div>
                     </div>
                     <div class="row pt-3">

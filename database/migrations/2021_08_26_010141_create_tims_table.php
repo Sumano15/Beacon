@@ -18,7 +18,7 @@ class CreateTimsTable extends Migration
             $table->string('nama_tim');
             $table->string('asal_sekolah');
             $table->string('asal_kota');
-            $table->text('password');
+            $table->foreignId('user_id')->constrained();
             $table->string('bukti_transfer');
             $table->string('norek');
             $table->string('nama_bank');

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use App\Models\User;
-use App\Models\tim;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -52,10 +52,11 @@ class FortifyServiceProvider extends ServiceProvider
         // });
 
         Fortify::authenticateUsing(function (Request $request) {
-            $tim = tim::where('nama_tim', $request->nama_tim)->first();
-            if ($tim &&
-                Hash::check($request->password, $tim->password)) {
-                return $tim;
+            $user = user::where('team_name', $request->tn)->first();
+            if ($user &&
+                Hash::check($request->password, $user->password)) {
+                    Auth::login($user);
+                    return $user;
             }
         });
     }
