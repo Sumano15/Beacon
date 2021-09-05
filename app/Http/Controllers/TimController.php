@@ -21,6 +21,14 @@ class TimController extends Controller
         ));
     }
 
+    public function confirmed()
+    {
+        $datas = tim::where('status',1)->get();
+        return view('Back.confirmed',compact(
+            'datas'
+        ));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,6 +60,20 @@ class TimController extends Controller
         // $model->save();
 
         return view('register-members.index',compact('model'));
+    }
+
+    /**
+     * Update Status on tims Table
+     * @param int $tid 
+     * @return \Illuminate\Http\Response
+     */
+    public function confirm($tid)
+    {
+        $tim = tim::findOrFail($tid)->update([
+            'status' => 1
+        ]);
+        // DD($tim);
+        return back();
     }
 
     /**

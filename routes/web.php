@@ -42,3 +42,6 @@ Route::get('/home', function () {
 });
 
 Route::get('/back',[TimController::class,'index']);
+Route::get('/confirmed',[TimController::class,'confirmed']);
+
+Route::get('/tim/confirm/{tid}', [TimController::class, 'confirm']);
