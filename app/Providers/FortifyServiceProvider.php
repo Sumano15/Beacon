@@ -34,30 +34,29 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Fortify::createUsersUsing(CreateNewUser::class);
-        Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
-        Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
-        Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
+        // Fortify::createUsersUsing(CreateNewUser::class);
+        // Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
+        // Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
+        // Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
 
-        // Fortify::loginView(function () {
-        //     return view('login.index');
-        // });
-
-        RateLimiter::for('login', function (Request $request) {
-            return Limit::perMinute(5)->by($request->email.$request->ip());
+        Fortify::loginView(function () {
+            return view('login.index');
         });
 
-        RateLimiter::for('two-factor', function (Request $request) {
-            return Limit::perMinute(5)->by($request->session()->get('login.id'));
-        });
-
-        // Fortify::authenticateUsing(function (Request $request) {
-        //     $user = tim::where('nama_tim', $request->username)->first();
-
-        //     if ($user &&
-        //         Hash::check($request->password, $user->password)) {
-        //         return $user;
-        //     }
+        // RateLimiter::for('login', function (Request $request) {
+        //     return Limit::perMinute(5)->by($request->email.$request->ip());
         // });
+
+        // RateLimiter::for('two-factor', function (Request $request) {
+        //     return Limit::perMinute(5)->by($request->session()->get('login.id'));
+        // });
+
+        Fortify::authenticateUsing(function (Request $request) {
+            $tim = tim::where('nama_tim', $request->username)->first();
+            if ($tim &&
+                Hash::check($request->password, $tim->password)) {
+                return $tim;
+            }
+        });
     }
 }

@@ -83,19 +83,28 @@
         <div class="row justify-content-center" style="width:auto;">
             <div class="col-4 login-form px-4 py-4">
                 <form class="login-tim" method="POST" action="{{ url('/login') }}" style="width:auto;">
+                    @if (isset($errors) && count($errors))
+                    
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }} </li>
+                        @endforeach
+                    </ul>
+                    
+                    @endif
                     @csrf
                     <p class="login-text pt-3"> Log In </p>
         
                     <div class="row pt-3">
                         <div class="col-12">
-                            <label for="nama" class="form-label"> Team's Name </label>
-                            <input type="text" class="form-control" id="detail2" name="username" placeholder="Team's Name">
+                            <label for="username" class="form-label"> Team's Name </label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Team's Name">
                         </div>
                     </div>
                     <div class="row pt-3">
                         <div class="col-12">
                             <label for="nama" class="form-label"> Password </label>
-                            <input type="password" class="form-control" id="detail2" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                         </div>
                     </div>
                     <div class="row pt-3">
