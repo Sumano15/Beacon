@@ -41,6 +41,4 @@ Route::get('/home', function () {
     return view('Front.home');
 });
 
-Route::get('/back', function () {
-    return view('Back.index');
-});
+Route::get('/back',[TimController::class,'index']);
