@@ -7,7 +7,7 @@
 <style>
     .register-members-tim { 
         min-height: 300px;
-        width:500px;
+        width:auto;
         background: #fff;
         border-radius: 20px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
@@ -58,22 +58,20 @@
     .confirm-btn {
         font-family: 'Hina Mincho', serif;
         font-size: 30px;
-        color: white;
+        color: white !important;
+        background-color: #C36839 !important;
         justify-content: center;
         width: 100%;
-        padding: 15px 20px;
         text-align: center;
         border: none;
-        background: #C36839;
-        outline: none; 
-        border-radius: 20px;
+        border-radius: 20px !important;
         cursor: pointer; 
-        transition: .3s;
+       
     }
 
     .confirm-btn:hover {
-        transform: translateY(-5px);
-        background: #86340A;
+        background-color: white !important;
+        color: #C36839 !important;
     }
 
 </style>
@@ -88,7 +86,7 @@
         <input type="hidden" name="asal_kota" value="{{ $model->asal_kota }}">
         <input type="hidden" name="password" value="{{ $model->password }}">
         <div class="row pb-4 justify-content-center">
-            <div class="col-6">
+            <div class="col-12 col-md-4 ps-md-0 pe-md-0">
                 <div class="row register-members-form justify-content-center">
                     <div class="col-12">
                         <div class="register-members-tim pb-5">
@@ -157,9 +155,8 @@
             </div>
         </div>
         <!--Member 2-->
-        <div class="row pb-4">
-            <div class="col-3"></div>
-            <div class="col-6">
+        <div class="row pb-4 justify-content-center">
+            <div class="col-12 col-md-4 ps-md-0 pe-md-0">
                 <div class="row register-members-form">
                     <div class="col-12">
                         <div class="register-members-tim pb-5">
@@ -229,9 +226,8 @@
         </div>
 
         <!-- Member3 -->
-        <div class="row pb-4">
-            <div class="col-3"></div>
-            <div class="col-6">
+        <div class="row pb-4 justify-content-center">
+            <div class="col-12 col-md-4 ps-md-0 pe-md-0">
                 <div class="row resgister-members-form">
                     <div class="col-12">
                         <div class="register-members-tim pb-5">
@@ -301,9 +297,8 @@
         </div>
 
         <!-- Payment -->
-        <div class="row pb-4">
-            <div class="col-3"></div>
-            <div class="col-6">
+        <div class="row pb-4 justify-content-center">
+            <div class="col-12 col-md-4 ps-md-0 pe-md-0">
                 <div class="row register-members-form">
                     <div class="col-12">
                         <div class="register-members-tim pb-5">
@@ -347,12 +342,13 @@
             </div>
         </div>
 
-        <div class="row pb-4">
-            <div class="col-3"> </div>
-            <div class="col-6 justify-content-center">
-                <button class="btn confirm-btn" type="submit"> Confirm </button>
-            </div>
-            <div class="col-3"></div>
+        <div class="row pb-4 ">
+            <center>
+                <div class="col-3">   
+                    <button class="btn confirm-btn" type="submit"> Confirm </button>
+                </div>
+            </center>
+            
         </div>
 
         <!-- <div class="row pb-4 justify-content-center">
