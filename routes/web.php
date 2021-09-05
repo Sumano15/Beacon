@@ -36,3 +36,7 @@ Route::resource('peserta', PesertaController::class);
 Route::get('/login_tim', function(){
     return view('login.index'); 
 });
+
+Route::get('/home', function () {
+    return view('Front.home');
+});

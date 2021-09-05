@@ -17,7 +17,6 @@ use App\Models\tim;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
-
 class JetstreamServiceProvider extends ServiceProvider
 {
     /**

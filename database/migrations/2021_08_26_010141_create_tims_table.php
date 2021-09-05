@@ -23,6 +23,7 @@ class CreateTimsTable extends Migration
             $table->string('norek');
             $table->string('nama_bank');
             $table->string('nama_akun_bank');
+            $table->integer('coin');
             $table->timestamps();
             $table->softDeletes();
         });
