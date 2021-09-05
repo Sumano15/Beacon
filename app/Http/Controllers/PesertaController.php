@@ -54,6 +54,7 @@ class PesertaController extends Controller
         $model->nama_bank = $request->bank_name;
         $model->norek = $request->bank_account;
         $model->coin = 5000;
+        $model->status = 0;
         $model->save();
         // dd($request->member_fullname);
         // dd($request->member_photo[1]);
