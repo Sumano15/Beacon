@@ -1341,11 +1341,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<< HEAD
-            "time": "2021-08-27T13:34:11+00:00"
-=======
             "time": "2021-08-31T13:55:57+00:00"
->>>>>>> 614893595134b3f37bd4a96fc8a956d630aefb5e
         },
         {
             "name": "laravel/jetstream",
@@ -8257,6 +8253,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
@@ -8428,5 +8425,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

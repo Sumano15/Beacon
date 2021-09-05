@@ -5,6 +5,10 @@
 @endsection
 
 <style>
+    .login-content {
+        padding-top: 100px;
+    }
+
     .login-form {
         min-height: 340px;
         width: auto;
@@ -28,7 +32,7 @@
         padding: 15px 20px;
         text-align: center;
         border: none;
-        background: #C36839;
+        background: #3E5952;
         outline: none; 
         border-radius: 20px;
         font-size: 1.2rem;
@@ -39,7 +43,7 @@
 
     .login-form .login-tim .btn:hover {
         transform: translateY(-5px);
-        background: #86340A;
+        background: #2F4858;
     }   
 
     .g-recaptcha{
@@ -74,12 +78,13 @@
         font-family: 'Hina Mincho', serif;
         font-size: 30px;
         color: white;
+        
     }
 
 </style>
 
 @section('content')
-    <div class="container-fluid login-content pt-5 pb-5">
+    <div class="container-fluid login-content pb-5">
         <div class="row justify-content-center" style="width:auto;">
             <div class="col-4 login-form px-4 py-4">
                 <form class="login-tim" method="POST" action="{{ url('/login') }}" style="width:auto;">

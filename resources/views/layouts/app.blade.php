@@ -20,7 +20,8 @@
 </head>
 <style>
     body{
-        background-color: #F7D59C;
+        background-color: #FAF2E1;
+;
     }
 
     .footer{
@@ -28,14 +29,36 @@
         min-height:300px; 
     }
 
-    .haft-navbar {
+    .navbar {
         padding-right: 0 !important;
         padding-left: 0 !important;
-        background: #C36839;
-        height: 72px;
+        background: #3F2418;
+        height: 70px;
         width: 100%;
     }
 
+    #navbarNav ul li a {
+        color: white;
+        font-family: 'Hina Mincho', serif;
+        font-size: 18px;
+    }
+
+    #navbarNav ul li a:hover {
+        color: #ffe5d8;
+        /* transform: translateY(-3px); */
+    }
+
+    #navbarNav ul {
+        margin-left: auto;
+    }
+
+    .user-profile {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+    }
+/* 
     .menu-button span {
         position: absolute;
         padding:0;
@@ -103,13 +126,13 @@
         transform: translateY(-3px);
         color: #86340A;
         width 100%;
-    }
+    } */
 </style>
 
 <body>
     <!--NAVBAR-->
-    <div class="container-fluid haft-navbar">
-        <div class="btn menu-button">
+    <div class="container-fluid">
+        <!-- <div class="btn menu-button">
             <span class="fas fa-bars"> </span>
         </div>
         <div class="sidebar">
@@ -122,18 +145,38 @@
                 <li> <a href="#"> Status </a> </li>
                 <li> <a href="#"> Log Out </a> </li>
             </ul>
-        </div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <div class="user-profile">  </div>
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> About Us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Guidebook </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Login </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 
 
     @yield('content')
 
-    <script>
-        $('.menu-button').click(function(){
-            $(this).toggleClass("click");
-            $('.sidebar').toggleClass("show");
-        });
-    </script>
+    
 
 </body>
 </html>
