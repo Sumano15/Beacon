@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\peserta;
 use App\Models\tim;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PesertaController extends Controller
@@ -44,11 +45,18 @@ class PesertaController extends Controller
         }else{
             return back()->with('error', 'File Required');
         }
+
+        $user = User::create([
+            'team_name' => $request->nama_tim,
+            'password' => $request->password
+        ]);
+
         $model = new tim;
         $model->nama_tim = $request->nama_tim;
         $model->asal_sekolah = $request->asal_sekolah;
         $model->asal_kota = $request->asal_kota;
-        $model->password = $request->password;
+        // $model->password = $request->password;
+        $model->user_id = $user->id;
         $model->bukti_transfer = $payment_path;
         $model->nama_akun_bank = $request->account_name;
         $model->nama_bank = $request->bank_name;
@@ -57,6 +65,8 @@ class PesertaController extends Controller
         $model->save();
         // dd($request->member_fullname);
         // dd($request->member_photo[1]);
+
+        
 
         foreach ($request->member_fullname as $key => $fullname) {
             $photo_path = null;
