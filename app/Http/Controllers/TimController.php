@@ -15,7 +15,10 @@ class TimController extends Controller
      */
     public function index()
     {
-        //
+        $datas = tim::all();
+        return view('Back.index',compact(
+            'datas'
+        ));
     }
 
     /**
