@@ -38,7 +38,7 @@
         padding: 15px 20px;
         text-align: center;
         border: none;
-        background: #C36839;
+        background: #3E5952;
         outline: none; 
         border-radius: 20px;
         font-size: 1.2rem;
@@ -49,7 +49,7 @@
 
     .register-form .register-tim .btn:hover {
         transform: translateY(-5px);
-        background: #86340A;
+        background: #2F4858;
     }   
 
     .g-recaptcha{
@@ -77,11 +77,14 @@
     }
 
     .register-btn {
+        background: ##3E5952;
         font-family: 'Hina Mincho', serif;
         font-size: 20px;
     }
     
-
+    .register-btn btn:hover {
+        background: #2F4858;
+    }
 </style>
 
 @section('content')
@@ -95,20 +98,20 @@
                             @csrf
                             <p class="register-text pt-4"> Registagion Page </p>
                             
-                            {{-- <div class="row pt-3">
+                            <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="nama" class="form-label"> Email </label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" require>
                                 </div>
                                 <div class="col-1"> </div>
-                            </div> --}}
+                            </div>
         
                             <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="nama_tim" class="form-label"> Team's Name </label>
-                                    <input type="text" class="form-control" id="nama_tim" name="nama_tim" placeholder="Team's Name">
+                                    <input type="text" class="form-control" id="nama_tim" name="nama_tim" placeholder="Team's Name" require>
                                 </div>
                                 <div class="col-1"> </div>
                             </div>
@@ -117,7 +120,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="asal_kota" class="form-label"> City </label>
-                                    <input type="text" class="form-control" id="asal_kota" name="asal_kota" placeholder="City">
+                                    <input type="text" class="form-control" id="asal_kota" name="asal_kota" placeholder="City" require> 
                                 </div>
                                 <div class="col-1"> </div>
                             </div>
@@ -126,7 +129,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="asal_sekolah" class="form-label"> School Origin </label>
-                                    <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="School Origin">
+                                    <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="School Origin" require>
                                 </div>
                                 <div class="col-1"> </div>
                             </div>
@@ -135,7 +138,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="password" class="form-label"> Team's Password </label>
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Team's Password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Team's Password" require>
                                 </div>
                                 <div class="col-1"> </div>
                             </div>

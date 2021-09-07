@@ -6,7 +6,7 @@
 
 <style>
     .login-content {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .login-form {

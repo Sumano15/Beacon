@@ -25,11 +25,6 @@
         background-color: #FAF2E1;
     }
 
-    .footer{
-        background-color: cyan;
-        min-height:300px; 
-    }
-
     .navbar {
         padding-right: 0 !important;
         padding-left: 0 !important;
@@ -59,79 +54,27 @@
         border-radius: 50%;
         background-color: white;
     }
-/* 
-    .menu-button span {
-        position: absolute;
-        padding:0;
-        top: 10px;
-        left: 45px;
-        color: white;
-        font-size: 24px;
-        line-height: 45px;
-        height: 45px;
-        width: 45px;
-        border-radius: 3px;
-        border: 1px solid #e7e7e7;
-        background: #C36839;
+
+    footer {
+        background: #3F2418;
+        color: #FAF2E1;
+        
     }
 
-    .sidebar{
-        user-select: none;
-        box-sizing: border-box;
-        position: fixed;
-        margin-top: 0;
-        width: 250px;
-        height: 100%;
-        left: -250px;
-        background: #fff;
-        transition: left 0.4s ease;
+    footer ul li {
+        list-style-type: none;
     }
 
-    .sidebar.show {
-        left: 0px;
-    }
-
-    .sidebar .btn .exit-button{
-        height: 60px;
-    }
-
-    .sidebar .btn .exit-button span {
-        color: #C36839;
-        text-align: center;
-        font-size: 24px;
-        line-height: 45px;
-        padding: 0;
-    }
-
-    .sidebar ul {
-        background: #fff;
-        height:100%;
-        width: 100%;
-        list-style: none;
-    }
-
-    .sidebar ul li {
-        line-height: 50px;
-    }
-
-    .sidebar ul li a {
-        font-family: 'Hina Mincho', serif;
-        font-size: 20px;
-        color: #111;
+    footer ul li a {
+        color: #FAF2E1;
         text-decoration: none;
-        display: block;
-        width 100%;
+        font-family: 'Hina Mincho', serif;
+        font-size: 18px;
     }
-
-    .sidebar ul li a:hover {
-        transform: translateY(-3px);
-        color: #86340A;
-        width 100%;
-    } */
 </style>
 
 <body>
-    <!--NAVBAR-->
+    <!-- Navbar -->
     <div class="container-fluid">
         <!-- <div class="btn menu-button">
             <span class="fas fa-bars"> </span>
@@ -174,14 +117,44 @@
         </nav>
     </div>
 
-    <div class="container-fluid">
-        <div class="row pt-5">
-
-        </div>
+    <div class="container-fluid pt-5">
         @yield('content')
     </div>
     
+    <!-- Footer  -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <div class="row">
+                        <div class="col">
+                            <h5> Beacon </h5>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li> 
+                                    <i class="fab fa-line"> </i>
+                                    <a href="#"> Line </a>
+                                </li>
+                                <li> 
+                                    <i class="fab fa-instagram"> </i>
+                                    <a href="#"> Instagram </a>
+                                </li>
+                                <li> 
+                                    <i class="fab fa-whatsapp"> </i>
+                                    <a href="#"> WhatsApp </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6"> </div>
+            </div>
+        </div>
+    </footer>
     
 
 </body>

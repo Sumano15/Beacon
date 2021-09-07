@@ -41,6 +41,10 @@ Route::get('/home', function () {
     return view('Front.home');
 });
 
+Route::get('/about-us', function () {
+    return view('about.index');
+});
+
 Route::get('/back',[TimController::class,'index']);
 Route::get('/confirmed',[TimController::class,'confirmed']);
 
