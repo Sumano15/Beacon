@@ -110,6 +110,14 @@ class TimController extends Controller
         //
     }
 
+    public function update_coin(Request $request)
+    {
+        $tim = tim::findOrFail($request->id)->update([
+            'coin' => $request->coin
+        ]);
+        return back()->with('succes', 'Your data has been updated');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

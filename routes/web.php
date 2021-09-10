@@ -45,7 +45,9 @@ Route::get('/about-us', function () {
     return view('about.index');
 });
 
-Route::get('/back',[TimController::class,'index']);
-Route::get('/confirmed',[TimController::class,'confirmed']);
+Route::get('/back',[TimController::class,'index'])->middleware('admin');
+Route::get('/confirmed',[TimController::class,'confirmed'])->middleware('admin');
 
-Route::get('/tim/confirm/{tid}', [TimController::class, 'confirm']);
+Route::get('/tim/confirm/{tid}', [TimController::class, 'confirm'])->middleware('admin');
+
+Route::post('/tim/coin/update', [TimController::class, 'update_coin'])->name('coin.update')->middleware('admin');

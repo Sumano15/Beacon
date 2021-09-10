@@ -26,7 +26,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'team_name', 'email', 'password',
+        'team_name', 'email', 'password', 'team_id'
     ];
 
     /**
@@ -58,4 +58,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }
