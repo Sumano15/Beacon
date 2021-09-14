@@ -23,6 +23,12 @@
 <style>
     body{
         background-color: #FAF2E1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-image: url({{asset('asset-pdd/main-bg-1.PNG')}}) ;
+        
     }
 
     .beacon-navbar {
@@ -40,7 +46,7 @@
         font-family: 'Hina Mincho', serif !important;
         font-size: 18px !important;
         text-decoration: none !important;
-        padding: 20px;
+        padding: 30px;
     }
 
   
@@ -115,19 +121,19 @@
     {{-- BUAT NON HP --}}
     <nav class="beacon-navbar fixed-top d-none d-lg-block">
         <div class="container-fluid">
-            <div class="row pt-3 pb-3">
+            <div class="row pt-2 pb-3">
                 <div class="col-1">
                     {{-- BUAT SPACE --}}
                 </div>
                 <div class="col-2">
-                    <div class="user-profile">  </div>
+                    <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="50">
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     {{-- BUAT SPACE --}}
                 </div>
-                <div class="col-4">
+                <div class="col-6 pt-2 ps-5">
                     <ul class="beacon-option">
-                        <li class="beacon-option-item">
+                        <li class="beacon-option-item ">
                             <a href="/home"> Home </a>
                         </li>
                         <li class="beacon-option-item">
@@ -141,6 +147,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="col-1">
                     {{-- BUAT SPACE --}}
                 </div>
@@ -200,42 +207,50 @@
             
         </div>
     </nav>
-
     <div class="pt-5">
         @yield('content')
     </div>
     
+    
     <!-- Footer  -->
-    <footer class="pt-5 pb-4">
+    <footer class="pt-1 pb-4">
         <div class="container">
             <div class="row">
                 <div class="col-6 mt-3">
                     <div class="row">
                         <div class="col">
-                            <h5> Beacon </h5>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <ul>
-                                <li> 
-                                    <i class="fab fa-line"> </i>
-                                    <a href="#"> Line </a>
-                                </li>
-                                <li> 
-                                    <i class="fab fa-instagram"> </i>
-                                    <a href="#"> Instagram </a>
-                                </li>
-                                <li> 
-                                    <i class="fab fa-whatsapp"> </i>
-                                    <a href="#"> WhatsApp </a>
-                                </li>
-                            </ul>
+                            <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="70">
                         </div>
                     </div>
                 </div>
                 <div class="col-6"> </div>
+            </div>
+            <div class="row pt-2 ps-3">
+                <table style="width:30px">
+                   
+                    <tr class="ps-3">
+                        <td>
+                          <img src="{{asset('asset-pdd/icon line.PNG')}}" alt="" width="auto" height="22">
+                        </td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Line</p>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td><img src="{{asset('asset-pdd/icon instagram.PNG')}}" alt="" width="auto" height="22"></td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Instagram</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <img src="{{asset('asset-pdd/icon whatsapp.PNG')}}" alt="" width="auto" height="22">
+                        </td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Whatsapp</p>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </footer>
