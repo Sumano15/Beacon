@@ -14,7 +14,7 @@
 @section('content')
 
 <div class="container">
-    <div class="row beacon-text-content pb-5">
+    <div class="row beacon-text-content">
         <div class="col-12 text-center align-middle">
             <h1 class="beacon-text"> Beacon </h1>
             <p class="beacon-full-text"> Business Engineering Annual Competition </p>

@@ -9,6 +9,9 @@
         /* padding-top: 100px; */
         height: 400px;
         background: #D0B781;
+        /* background-size: cover;
+        background-repeat: repeat;
+        background-image: url({{asset('asset-pdd/main-bg-2.PNG')}}); */
     }
 
     .sponsor-content {
@@ -44,13 +47,14 @@
 @section('content')
 
 <div class="container-fluid pt-5">
-    <div class="row beacon-text-content px-0 pt-5">
+    {{-- <div class="row beacon-text-content px-0 pt-5">
         <div class="col-12 text-center align-middle">
             <h1 class="beacon-text"> Beacon </h1>
             <p class="beacon-full-text"> Business Engineering Annual Competition </p>
             <p class="beacon-theme-text"> Uniting Nusantara </p>
-        </div>
-    </div>
+        </div> 
+        KATA RICAD NANTI DISINI CORUSEL
+    </div> --}}
 
     <div class="row pt-5 pb-5">
         <div class="col">

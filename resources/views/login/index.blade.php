@@ -86,7 +86,8 @@
 @section('content')
     <div class="container-fluid login-content pb-5">
         <div class="row justify-content-center" style="width:auto;">
-            <div class="col-4 login-form px-4 py-4">
+            <div class="col-4 d-none d-md-block"></div>
+            <div class="col-12 col-md-4  login-form px-4 py-4">
                 <form class="login-tim" method="POST" action="{{ url('/login') }}" style="width:auto;">
                     @if (isset($errors) && count($errors))
                     
@@ -130,6 +131,7 @@
                     </div>
                 </form>
             </div>
+            <div class="col-4 d-none d-md-block"></div>
         </div>
     </div>
 @endsection

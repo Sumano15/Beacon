@@ -23,28 +23,39 @@
 <style>
     body{
         background-color: #FAF2E1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-image: url({{asset('asset-pdd/main-bg-1.PNG')}}) ;
+        
     }
 
-    .navbar {
+    .beacon-navbar {
         padding-right: 0 !important;
         padding-left: 0 !important;
         background: #3F2418;
-        height: 70px;
         width: 100%;
     }
-
-    #navbarNav ul li a {
-        color: white;
-        font-family: 'Hina Mincho', serif;
-        font-size: 18px;
+    .beacon-option-item {
+        display: inline;
     }
 
-    #navbarNav ul li a:hover {
-        color: #ffe5d8;
+    .beacon-option-item a{
+        color: white !important;
+        font-family: 'Hina Mincho', serif !important;
+        font-size: 18px !important;
+        text-decoration: none !important;
+        padding: 30px;
+    }
+
+  
+    .beacon-navbar-nav ul li a:hover {
+        color: #ffe5d8 !important;
         /* transform: translateY(-3px); */
     }
 
-    #navbarNav ul {
+    .beacon-navbar-nav ul {
         margin-left: auto;
     }
 
@@ -71,87 +82,175 @@
         font-family: 'Hina Mincho', serif;
         font-size: 18px;
     }
+    .bar{
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        transition: 0.4s;
+        background-color: #ffff;
+    }
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .beacon-option-item-hp{
+        color: white !important;
+        font-family: 'Hina Mincho', serif !important;
+        font-size: 18px !important;
+        text-decoration: none !important;
+        
+    }
+    
+
+   
 </style>
 
 <body>
-    <!-- Navbar -->
-    <div class="container-fluid">
-        <!-- <div class="btn menu-button">
-            <span class="fas fa-bars"> </span>
-        </div>
-        <div class="sidebar">
-            <div class="btn exit-button">
-                <span class="fa-solid fa-xmark"> </span>
-            </div>
-            <ul>
-                <li> <a href="#"> Home </a> </li>
-                <li> <a href="#"> About Us </a> </li>
-                <li> <a href="#"> Status </a> </li>
-                <li> <a href="#"> Log Out </a> </li>
-            </ul>
-        </div> -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <div class="user-profile">  </div>
-                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/"> Home </a>
+    {{-- BUAT NON HP --}}
+    <nav class="beacon-navbar fixed-top d-none d-lg-block">
+        <div class="container-fluid">
+            <div class="row pt-2 pb-3">
+                <div class="col-1">
+                    {{-- BUAT SPACE --}}
+                </div>
+                <div class="col-2">
+                    <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="50">
+                </div>
+                <div class="col-2">
+                    {{-- BUAT SPACE --}}
+                </div>
+                <div class="col-6 pt-2 ps-5">
+                    <ul class="beacon-option">
+                        <li class="beacon-option-item ">
+                            <a href="/home"> Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about-us"> About Us </a>
+                        <li class="beacon-option-item">
+                            <a href="/about-us"> About Us </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Guidebook </a>
+                        <li class="beacon-option-item">
+                            <a href="/guidebook"> Guidebook </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('tim/create') }}"> Login </a>
+                        <li class="beacon-option-item">
+                            <a href="/login_tim"> Login </a>
                         </li>
                     </ul>
                 </div>
+                
+                <div class="col-1">
+                    {{-- BUAT SPACE --}}
+                </div>
             </div>
-        </nav>
-    </div>
-
-    <div class="container-fluid pt-5">
+            
+            
+            
+        </div>
+    </nav>
+    {{-- BUAT HP --}}
+    <nav class="beacon-navbar d-block d-lg-none sticky-top ">
+        <div class="container-fluid ">
+            <div class="topnav">
+                <div class="row pt-3 pb-3">
+                    <div class="col-1">
+                        {{-- BUAT SPACE --}}
+                    </div>
+                    <div class="col-6 ">
+                        <div class="user-profile">  </div>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </a>
+                    </div>
+                </div>
+                <div id="myLinks" class="option">
+                    <div class="row pt-2 ps-2">
+                        <div class="col beacon-option-item-hp">   
+                            <a href="/home"> Home </a>
+                        </div>
+                    </div>
+                    <div class="row pt-2 ps-2">
+                        <div class="col beacon-option-item-hp">
+                            <a href="/about-us"> About Us </a>
+                        </div>
+                    </div>
+                    <div class="row pt-2 ps-2">
+                        <div class="col beacon-option-item-hp">
+                            <a href="/guidebook"> Guidebook </a>
+                        </div>
+                    </div>
+                    <div class="row pt-2 ps-2">
+                        <div class="col beacon-option-item-hp">
+                            <a href="/login_tim"> Login </a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row pb-2"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </nav>
+    <div class="pt-5">
         @yield('content')
     </div>
     
+    
     <!-- Footer  -->
-    <footer class="pt-5 pb-4">
+    <footer class="pt-1 pb-4">
         <div class="container">
             <div class="row">
                 <div class="col-6 mt-3">
                     <div class="row">
                         <div class="col">
-                            <h5> Beacon </h5>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <ul>
-                                <li> 
-                                    <i class="fab fa-line"> </i>
-                                    <a href="#"> Line </a>
-                                </li>
-                                <li> 
-                                    <i class="fab fa-instagram"> </i>
-                                    <a href="#"> Instagram </a>
-                                </li>
-                                <li> 
-                                    <i class="fab fa-whatsapp"> </i>
-                                    <a href="#"> WhatsApp </a>
-                                </li>
-                            </ul>
+                            <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="70">
                         </div>
                     </div>
                 </div>
                 <div class="col-6"> </div>
+            </div>
+            <div class="row pt-2 ps-3">
+                <table style="width:30px">
+                   
+                    <tr class="ps-3">
+                        <td>
+                          <img src="{{asset('asset-pdd/icon line.PNG')}}" alt="" width="auto" height="22">
+                        </td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Line</p>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td><img src="{{asset('asset-pdd/icon instagram.PNG')}}" alt="" width="auto" height="22"></td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Instagram</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <img src="{{asset('asset-pdd/icon whatsapp.PNG')}}" alt="" width="auto" height="22">
+                        </td>
+                        <td class="pt-3">
+                            <p style="color:#4F0202">Whatsapp</p>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </footer>
@@ -159,3 +258,14 @@
 
 </body>
 </html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
