@@ -247,35 +247,31 @@ body {
             <td>{{ $value->coin}}</td>    
             <td>{{ $value->status==0?"Belum Di konfirmasi":"sudah Di konfirmasi"}}</td>   
             <td>
-              <button type="button" id="edit-coin" class="btn btn-primary" data-id="{{ $value->id }}" data-coin="{{ $value->coin }}">
-                Edit Coin
+              <button type="button" id="min-coin" class="btn btn-primary" data-id="{{ $value->id }}" data-coin="{{ $value->coin }}">
+                -
+              </button>
+              <button type="button" id="plus-coin" class="btn btn-primary" data-id="{{ $value->id }}" data-coin="{{ $value->coin }}">
+                +
               </button>
             </td>       
           </tr>
             @endforeach
       </table>
     </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <center>
+    <div class="modal fade" id="min_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
-        <form action="{{ route('coin.update') }}" method="post">
+        <form action="{{ route('coin.min') }}" method="post">
           @csrf
           <input type="hidden" name="id" value="" id="row-id">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal Edit Poin</h5>
+              <h5 class="modal-title" id="staticBackdropLabel">Pengurangan Poin</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <center>
-                <div class="plusminus-container">
-                  <div class="grid-container">
-                    <div class="grid-item-right">–</div>
-                    <div id="grid-item-center">
-                      <input type="text" name="coin" id="counter" value="1" class="counter">
-                    </div>
-                      <div class="grid-item-left">+</div>
-                    </div>
-                </div>
+                <input type="text" name="coin" id="counter" value="1" class="counter">
               </center>
             </div>
             <div class="modal-footer">
@@ -285,30 +281,58 @@ body {
         </form>
       </div>
     </div>
+    </center>
+
+    <center>
+    <div class="modal fade" id="plus_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <form action="{{ url('/tim/coin/plus') }}" method="post">
+          @csrf
+          <input type="hidden" name="id" value="" id="row-id+">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Penambahan Coin</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <center>
+                <input type="text" name="coin" id="counter" value="1" class="counter">
+              </center>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    </center>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <Script>
-
-    document.querySelector('.grid-item-left').addEventListener('click', function(){
-      document.querySelector('.counter').value++;  
-    })
-
-    document.querySelector('.grid-item-right').addEventListener('click', function(){
-      document.querySelector('.counter').value--;
+    var editminModal = new bootstrap.Modal(document.getElementById("min_modal"), {
+      keyboard: false
     });
-
-    var editModal = new bootstrap.Modal(document.getElementById("staticBackdrop"), {
+    
+    var editplusModal = new bootstrap.Modal(document.getElementById("plus_modal"), {
       keyboard: false
     });
 
-    var editButton = document.getElementById("edit-coin");
-    editButton.addEventListener('click', function(){
+    var editminButton = document.getElementById("min-coin");
+    editminButton.addEventListener('click', function(){
       var id = this.dataset.id;
       var coin = this.dataset.coin;
       document.getElementById("row-id").value = id;
-      document.getElementById("counter").value = coin;
-      editModal.show();
+      editminModal.show();
+    });
+
+    var editplusButton = document.getElementById("plus-coin");
+    editplusButton.addEventListener('click', function(){
+      var id = this.dataset.id;
+      var coin = this.dataset.coin;
+      document.getElementById("row-id+").value = id;
+      editplusModal.show();
     });
 
     function openNav() {

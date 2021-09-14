@@ -189,7 +189,7 @@ body {
             <td>{{ $value->nama_bank}}</td>   
             <td>{{ $value->nama_akun_bank}}</td>   
             <td>{{ $value->status==0?"Belum Di konfirmasi":"sudah Di konfirmasi"}}</td>   
-            <td><a href="{{ url('tim/confirm/' . $value->id) }}"><button class="btn btn-primary">konfirmasi</button></a></td>       
+            <td><a href="{{ url('/confirmationMail/' . $value->id) }}"><button class="btn btn-primary">konfirmasi</button></a></td>       
           </tr>
             @endforeach
       </table>

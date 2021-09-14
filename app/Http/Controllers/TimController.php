@@ -69,9 +69,7 @@ class TimController extends Controller
      */
     public function confirm($tid)
     {
-        $tim = tim::findOrFail($tid)->update([
-            'status' => 1
-        ]);
+        
         // DD($tim);
         return back();
     }
@@ -110,11 +108,21 @@ class TimController extends Controller
         //
     }
 
-    public function update_coin(Request $request)
+    public function update_min_coin(Request $request)
     {
-        $tim = tim::findOrFail($request->id)->update([
-            'coin' => $request->coin
-        ]);
+        $tim = tim::findOrFail($request->id);
+        $tmp = $tim->coin;
+        $tim->coin = $tmp - $request->coin;
+        $tim->save();
+        return back()->with('succes', 'Your data has been updated');
+    }
+
+    public function update_plus_coin(Request $request)
+    {
+        $tim = tim::findOrFail($request->id);
+        $tmp = $tim->coin;
+        $tim->coin = $tmp + $request->coin;
+        $tim->save();
         return back()->with('succes', 'Your data has been updated');
     }
 

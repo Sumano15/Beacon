@@ -14,10 +14,6 @@ use App\Http\Controllers\PesertaController;
 |
 */
 
-Route::get('/', function () {
-    return view('Front.index');
-});
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -37,7 +33,7 @@ Route::get('/login_tim', function(){
     return view('login.index'); 
 });
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('Front.home');
 });
 
@@ -50,4 +46,6 @@ Route::get('/confirmed',[TimController::class,'confirmed'])->middleware('admin')
 
 Route::get('/tim/confirm/{tid}', [TimController::class, 'confirm'])->middleware('admin');
 
-Route::post('/tim/coin/update', [TimController::class, 'update_coin'])->name('coin.update')->middleware('admin');
+Route::post('/tim/coin/min', [TimController::class, 'update_min_coin'])->name('coin.min')->middleware('admin');
+Route::post('/tim/coin/plus', [TimController::class, 'update_plus_coin'])->name('coin.plus')->middleware('admin');
+Route::get('/confirmationMail/{tid}',[PesertaController::class, 'confirmationMail'])->name('confirmationMail')->middleware('admin');

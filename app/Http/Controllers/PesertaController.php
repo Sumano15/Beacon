@@ -6,7 +6,8 @@ use App\Models\peserta;
 use App\Models\tim;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\confirmationMail;
 class PesertaController extends Controller
 {
     /**
@@ -48,7 +49,9 @@ class PesertaController extends Controller
 
         $user = User::create([
             'team_name' => $request->nama_tim,
-            'password' => $request->password
+            'password' => $request->password,
+	        'team_id' => 1,
+            'email' => $request->member_email[0]
         ]);
 
         $model = new tim;
@@ -107,6 +110,7 @@ class PesertaController extends Controller
             // $peserta->tim_id = $model->id;
             // $peserta->save();
         }
+
         return redirect('/')->with('success', 'Form Uploaded Successfully');
     }
 
@@ -142,6 +146,15 @@ class PesertaController extends Controller
     public function update(Request $request, peserta $peserta)
     {
         //
+    }
+
+    public function confirmationMail(int $tid){
+        $tim = tim::findOrFail($tid);
+        Mail::to($tim->user)->send(new confirmationMail($tim));
+        $tim = tim::findOrFail($tid)->update([
+            'status' => 1
+        ]);
+        return back();
     }
 
     /**
