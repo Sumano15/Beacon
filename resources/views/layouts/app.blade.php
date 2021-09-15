@@ -126,7 +126,7 @@
                     {{-- BUAT SPACE --}}
                 </div>
                 <div class="col-2">
-                    <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="50">
+                    <img src="{{asset('asset-pdd/updated_i.PNG')}}" alt="" width="auto" height="50">
                 </div>
                 <div class="col-2">
                     {{-- BUAT SPACE --}}
@@ -166,7 +166,7 @@
                         {{-- BUAT SPACE --}}
                     </div>
                     <div class="col-6 ">
-                        <div class="user-profile">  </div>
+                        <img src="{{asset('asset-pdd/updated_i.PNG')}}" alt="" width="auto" height="50">
                     </div>
                     <div class="col-3"></div>
                     <div class="col-2">
@@ -219,7 +219,7 @@
                 <div class="col-6 mt-3">
                     <div class="row">
                         <div class="col">
-                            <img src="{{asset('asset-pdd/updated i.PNG')}}" alt="" width="auto" height="70">
+                            <img src="{{asset('asset-pdd/updated_i.PNG')}}" alt="" width="auto" height="70">
                         </div>
                     </div>
                 </div>
@@ -230,21 +230,21 @@
                    
                     <tr class="ps-3">
                         <td>
-                          <img src="{{asset('asset-pdd/icon line.PNG')}}" alt="" width="auto" height="22">
+                          <img src="{{asset('asset-pdd/icon_line.PNG')}}" alt="" width="auto" height="22">
                         </td>
                         <td class="pt-3">
                             <p style="color:#4F0202">Line</p>
                         </td>
                     </tr>
                     <tr >
-                        <td><img src="{{asset('asset-pdd/icon instagram.PNG')}}" alt="" width="auto" height="22"></td>
+                        <td><img src="{{asset('asset-pdd/icon_instagram.PNG')}}" alt="" width="auto" height="22"></td>
                         <td class="pt-3">
                             <p style="color:#4F0202">Instagram</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                          <img src="{{asset('asset-pdd/icon whatsapp.PNG')}}" alt="" width="auto" height="22">
+                          <img src="{{asset('asset-pdd/icon_whatsapp.PNG')}}" alt="" width="auto" height="22">
                         </td>
                         <td class="pt-3">
                             <p style="color:#4F0202">Whatsapp</p>
