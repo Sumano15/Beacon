@@ -154,6 +154,25 @@
         font-size: 18px !important;
         text-decoration: none !important;
     }
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #3F2418; 
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #694738; 
+    }
+
+
     
     .cd-horizontal-timeline {
     opacity: 0;
