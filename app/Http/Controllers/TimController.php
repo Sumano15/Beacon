@@ -51,6 +51,12 @@ class TimController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'nama_tim' => 'required|unique:App\Models\User,team_name',
+            'asal_sekolah' => 'required',
+            'asal_kota' => 'required',
+            'password' => 'required'
+        ]);
         $model = new tim;
        
         $model->nama_tim = $request->nama_tim;

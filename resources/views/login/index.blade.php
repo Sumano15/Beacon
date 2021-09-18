@@ -88,7 +88,7 @@
         <div class="row justify-content-center" style="width:auto;">
             <div class="col-4 d-none d-md-block"></div>
             <div class="col-12 col-md-4  login-form px-4 py-4">
-                <form class="login-tim" method="POST" action="{{ url('/login') }}" style="width:auto;">
+                <form class="login-tim" method="POST" action="{{ url('/login') }}" style="width:auto;" id="form-login">
                     @if (isset($errors) && count($errors))
                     
                     <ul>
@@ -119,19 +119,29 @@
                             <a href="{{ route('tim.create') }}"> Register here </a>
                         </div>
                     </div>
-                    <div class="row pt-3">
+                    <!-- <div class="row pt-3">
                         <div class="col-1"> </div>
                             <div class="col-10 register-here-text text-center justify-content-center">
-                                <div class="g-recaptcha justify-content-center" data-sitekey="6LdUZCgcAAAAAAWi5MPg6tkwkYYlo01i5OldbALN"> </div>
+                                <div class="g-recaptcha justify-content-center" data-sitekey="6LeeM3UcAAAAAD6Nqj4-rN-Xk_jfwd3GxiyE9N1N"> </div>
                             </div>
                         <div class="col-1"> </div>
-                    </div>
+                    </div> -->
                     <div class="row justify-content-center mt-4 pb-4">
-                        <button class="btn login-btn"> Log In </button>
+                        <!-- <button class="btn login-btn"> Log In </button> -->
+                        <button class="g-recaptcha btn login-btn" 
+                        data-sitekey="6LeeM3UcAAAAAD6Nqj4-rN-Xk_jfwd3GxiyE9N1N" 
+                        data-callback='onSubmit' 
+                        data-action='submit'> Log In </button>
                     </div>
                 </form>
             </div>
             <div class="col-4 d-none d-md-block"></div>
         </div>
     </div>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("form-login").submit();
+        }
+    </script>
 @endsection

@@ -52,9 +52,9 @@
         background: #2F4858;
     }   
 
-    .g-recaptcha{
+    /* .g-recaptcha{
         margin: 10px auto;
-    } 
+    }  */
 
     .login-here-text {
         font-family: 'Hina Mincho', serif;
@@ -94,18 +94,18 @@
             <div class="col-12 col-md-4 ps-md-0 pe-md-0">
                 <div class="row justify-content-center">
                     <div class="col-10 register-form">
-                        <form action="{{ route('tim.store') }}" method="POST"  enctype="multipart/form-data" class="register-tim">
+                        <form action="{{ route('tim.store') }}" method="POST"  enctype="multipart/form-data" class="register-tim" id="form-register">
                             @csrf
-                            <p class="register-text pt-4"> Registagion Page </p>
+                            <p class="register-text pt-4"> Registration Page </p>
                             
-                            <div class="row pt-3">
+                            <!-- <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="nama" class="form-label"> Email </label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" require>
                                 </div>
                                 <div class="col-1"> </div>
-                            </div>
+                            </div> -->
         
                             <div class="row pt-3">
                                 <div class="col-1"></div>
@@ -152,18 +152,22 @@
                                 <div class="col-1"> </div>
                             </div>
         
-                            <div class="row pt-3">
+                            <!-- <div class="row pt-3">
                                 <div class="col-1"> </div>
                                 <center>
                                     <div class="col-10 ">
-                                        <div class="g-recaptcha" data-sitekey="6LdUZCgcAAAAAAWi5MPg6tkwkYYlo01i5OldbALN"> </div>
+                                        <div class="g-recaptcha" data-sitekey="6Le1GnUcAAAAAGh6GqtthTpGl2AXX7Cb91cobf5i"> </div>
                                     </div>
                                 </center>
                                 <div class="col-1"> </div>
-                            </div>
+                            </div> -->
         
                             <div class="input-group justify-content-center pt-4 pb-5">
-                                <button class="btn register-btn" type="submit"> Register </button>
+                                <button class="g-recaptcha btn register-btn" style="border-radius: 20px"
+                                data-sitekey="6LeeM3UcAAAAAD6Nqj4-rN-Xk_jfwd3GxiyE9N1N" 
+                                data-callback='onSubmit' 
+                                data-action='submit'> Register </button>
+                                <!-- <button class="btn register-btn" type="submit"> Register </button> -->
                             </div>
                         </form>
                     </div>
@@ -173,5 +177,9 @@
         </div>
         
     </div>
-
+    <script>
+        function onSubmit(token) {
+            document.getElementById("form-register").submit();
+        }
+    </script>
 @endsection

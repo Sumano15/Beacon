@@ -29,6 +29,6 @@ class confirmationMail extends Mailable
      */
     public function build()
     {
-        return $this->from("No-Reply@beacon.petra.ac.id","Beacon 2021")->subject("Your Registration has been confirmed")->view("mailer.confirmationMail");
+        return $this->from("No-Reply@beacon.petra.ac.id","Beacon 2021")->subject("Do Not Reply This Email")->view("mailer.confirmationMail");
     }
 }

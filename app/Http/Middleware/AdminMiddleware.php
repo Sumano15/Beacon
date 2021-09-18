@@ -20,6 +20,6 @@ class AdminMiddleware
         if (Auth::check() || Auth::user()->team->name == "admin") {
             return $next($request);
         }
-        return redirect('/');
+        return redirect('/back');
     }
 }

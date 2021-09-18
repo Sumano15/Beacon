@@ -132,11 +132,11 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_fullname[]" class="form-label"> Full Name </label>
-                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name" require>
                                 </div>
                             </div>
 
-                            <div class="row pt-3">
+                            <!-- <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <div class="row">
@@ -162,13 +162,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="row pt-3"> 
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_phone_number[]" class="form-label"> Phone Number </label>
-                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number">
+                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number" require>
                                 </div>
                             </div>
 
@@ -176,7 +176,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_id_line[]" class="form-label"> ID Line </label>
-                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line">
+                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line" require>
                                 </div>
                             </div>
 
@@ -184,7 +184,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_instagram[]" class="form-label"> Instagram </label>
-                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram">
+                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram" require>
                                 </div>
                             </div>
 
@@ -192,7 +192,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_email[]" class="form-label"> Email </label>
-                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email">
+                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email" require>
                                 </div>
                             </div>
 
@@ -201,7 +201,7 @@
                                 <div class="col-10">
                                     <label for="member_photo[0]" class="form-label"> Upload Photo 3x4 </label>
                                     <label for="member_photo[0]" class="upload-button text-center"> Upload Photo </label>
-                                    <input type="file" class="form-control form-upload" id="member_photo[0]" name="member_photo[0]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_photo[0]" name="member_photo[0]" accept="image/*" require>
                                 </div>
                             </div>
 
@@ -210,7 +210,7 @@
                                 <div class="col-10">
                                     <label for="member_student_card[0]" class="form-label"> Upload Student Card </label>
                                     <label for="member_student_card[0]" class="upload-button text-center"> Upload Student Card </label>
-                                    <input type="file" class="form-control form-upload" id="member_student_card[0]" name="member_student_card[0]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_student_card[0]" name="member_student_card[0]" accept="image/*" require>
                                 </div>
                             </div>
                         </div>
@@ -230,11 +230,11 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_fullname[]" class="form-label"> Full Name </label>
-                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name" require>
                                 </div>
                             </div>
 
-                            <div class="row pt-3">
+                            <!-- <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <div class="row">
@@ -260,13 +260,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="row pt-3"> 
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_phone_number[]" class="form-label"> Phone Number </label>
-                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number">
+                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number" require>
                                 </div>
                             </div>
 
@@ -274,7 +274,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_id_line[]" class="form-label"> ID Line </label>
-                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line">
+                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line" require>
                                 </div>
                             </div>
 
@@ -282,7 +282,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_instagram[]" class="form-label"> Instagram </label>
-                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram">
+                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram" require>
                                 </div>
                             </div>
 
@@ -290,7 +290,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_email[]" class="form-label"> Email </label>
-                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email">
+                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email" require>
                                 </div>
                             </div>
 
@@ -299,7 +299,7 @@
                                 <div class="col-10">
                                     <label for="member_photo[1]" class="form-label"> Upload Photo 3x4 </label>
                                     <label for="member_photo[1]" class="upload-button text-center"> Upload Photo </label>
-                                    <input type="file" class="form-control form-upload" id="member_photo[1]" name="member_photo[1]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_photo[1]" name="member_photo[1]" accept="image/*" require>
                                 </div>
                             </div>
 
@@ -308,7 +308,7 @@
                                 <div class="col-10">
                                     <label for="member_student_card[1]" class="form-label"> Upload Student Card </label>
                                     <label for="member_student_card[1]" class="upload-button text-center"> Upload Student Card </label>
-                                    <input type="file" class="form-control form-upload" id="member_student_card[1]" name="member_student_card[1]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_student_card[1]" name="member_student_card[1]" accept="image/*" require>
                                 </div>
                             </div>
                         </div>
@@ -329,11 +329,11 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_fullname[]" class="form-label"> Full Name </label>
-                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="member_fullname[]" name="member_fullname[]" placeholder="Full Name" require>
                                 </div>
                             </div>
 
-                            <div class="row pt-3">
+                            <!-- <div class="row pt-3">
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <div class="row">
@@ -359,13 +359,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="row pt-3"> 
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_phone_number[]" class="form-label"> Phone Number </label>
-                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number">
+                                    <input type="text" class="form-control" id="member_phone_number[]" name="member_phone_number[]" placeholder="Phone Number" require>
                                 </div>
                             </div>
 
@@ -373,7 +373,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="member_id_line[]" class="form-label"> ID Line </label>
-                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line">
+                                    <input type="text" class="form-control" id="member_id_line[]" name="member_id_line[]" placeholder="ID Line" require>
                                 </div>
                             </div>
 
@@ -381,7 +381,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_instagram[]" class="form-label"> Instagram </label>
-                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram">
+                                    <input type="text" class="form-control" id="member_instagram[]" name="member_instagram[]" placeholder="Instagram" require>
                                 </div>
                             </div>
 
@@ -389,7 +389,7 @@
                                 <div class="col-1"> </div>
                                 <div class="col-10">
                                     <label for="member_email[]" class="form-label"> Email </label>
-                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email"> 
+                                    <input type="email" class="form-control" id="member_email[]" name="member_email[]" placeholder="Email" require> 
                                 </div>
                             </div>
 
@@ -398,7 +398,7 @@
                                 <div class="col-10">
                                     <label for="member_photo[2]" class="form-label"> Upload Photo 3x4 </label>
                                     <label for="member_photo[2]" class="upload-button text-center"> Upload Photo </label>
-                                    <input type="file" class="form-control form-upload" id="member_photo[2]" name="member_photo[2]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_photo[2]" name="member_photo[2]" accept="image/*" require>
                                 </div>
                             </div>
 
@@ -407,7 +407,7 @@
                                 <div class="col-10">
                                     <label for="member_student_card[2]" class="form-label"> Upload Student Card </label>
                                     <label for="member_student_card[2]" class="upload-button text-center"> Upload Student Card </label>
-                                    <input type="file" class="form-control form-upload" id="member_student_card[2]" name="member_student_card[2]" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="member_student_card[2]" name="member_student_card[2]" accept="image/*" require>
                                 </div>
                             </div>
                         </div>
@@ -428,7 +428,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10"> 
                                     <label for="bank_account" class="form-label"> Bank Account Number  </label>
-                                    <input type="text" class="form-control" id="bank_account" name="bank_account" placeholder="Bank Account Number">
+                                    <input type="text" class="form-control" id="bank_account" name="bank_account" placeholder="Bank Account Number" require>
                                 </div>
                             </div>
 
@@ -436,7 +436,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="bank_name" class="form-label"> Bank Name </label>
-                                    <input type="text" class="form-control" id="bank_name" name="bank_name" placeholder="Bank Name">
+                                    <input type="text" class="form-control" id="bank_name" name="bank_name" placeholder="Bank Name" require>
                                 </div>
                             </div>
 
@@ -444,7 +444,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-10">
                                     <label for="account_name" class="form-label"> Account Owner Name </label>
-                                    <input type="text" class="form-control" id="account_name" name="account_name" placeholder="Account Owner Name">
+                                    <input type="text" class="form-control" id="account_name" name="account_name" placeholder="Account Owner Name" require>
                                 </div>
                             </div>
 
@@ -453,7 +453,7 @@
                                 <div class="col-10">
                                     <label for="payment_script" class="form-label"> Upload Payment Script </label>
                                     <label for="payment_script" class="upload-button text-center"> Upload Payment Script </label>
-                                    <input type="file" class="form-control form-upload" id="payment_script" name="payment_script" accept="image/*">
+                                    <input type="file" class="form-control form-upload" id="payment_script" name="payment_script" accept="image/*" require>
                                 </div>
                             </div>
                         </div>
@@ -481,14 +481,12 @@
             <div class="modal-content">
                 <div class="row confirm-modal-header p-0 m-0 pt-3">
                     <div class="col">
-                        <h4 class="text-center"> Alert </h4>
+                        <h4 class="text-center"> Alert!! </h4>
                     </div>
                 </div>
                 <div class="row confirm-modal-body pt-3 pb-4 px-3">
                     <div class="col text-center">
-                        Thank you for your registration ! Please wait for our further confirmation email, 
-                        the mail will be sent maximum h+2 after registration. If you have not receive any email 
-                        in this period, please make sure to contact our Official LINE Account : @LoReMIPsuM
+                        Thank you for your registration! Please make sure all of your credentials are COMPLETE! You will receive confirmation e-mail the latest H+3 after registration. Please contact our Official LINE: @933aucku should you have any troubles.
                     </div>
                 </div>
                 <div class="row confirm-modal-footer text-center pb-3">
